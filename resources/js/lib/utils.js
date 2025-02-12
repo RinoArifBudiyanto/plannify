@@ -19,5 +19,9 @@ export const PRIORITY = {
   HIGH: "High",
   MEDIUM: "Medium",
   LOW: "Low",
-  UNKNOWN: "Unknown"
+  UNKNOWN: "Unknown",
 };
+
+export function flashMessage(params){
+  return params.props.flas_message; 
+}
