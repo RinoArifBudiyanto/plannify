@@ -18,6 +18,7 @@ Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
+// Menandakan akan memasuki halaman testing
 Route::get('testing', fn() => Inertia::render('Testing'));
 
 Route::middleware('auth')->group(function () {

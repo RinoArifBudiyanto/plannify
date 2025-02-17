@@ -2,7 +2,7 @@ import { Avatar, AvatarFallback } from '@/resources/js/components/ui/avatar';
 import { Dialog, Transition } from '@headlessui/react';
 import { Head, Link } from '@inertiajs/react';
 import { Fragment, useState } from 'react';
-import { PiSidebar, PiX } from 'react-icons/pi';
+import { PiHouse, PiLockKeyOpen, PiPlus, PiSidebar, PiSquaresFour, PiUser, PiX } from 'react-icons/pi';
 
 export default function AppLayout({ children, title }) {
     const [sidebarOpen, setSidebarOpen] = useState(false);
@@ -74,6 +74,63 @@ export default function AppLayout({ children, title }) {
                             </Link>
                         </div>
                         {/* Sidebar */}
+                        <nav className="flex flex-1 flex-col">
+                            <ul role="list" className="flex flex-1 flex-col gap-y-7">
+                                <li>
+                                    <ul role="list" className="-mx-2 space-y-3">
+                                        {/* menu */}
+                                        <li>
+                                            <Link
+                                                href="#"
+                                                className="group flex gap-3 gap-x-3 rounded-md p-3 font-semibold leading-relaxed tracking-tighter text-foreground hover:bg-red-500"
+                                            >
+                                                <PiHouse className="h-6 w-6 shrink-0 text-foreground" />
+                                                Dashboard
+                                            </Link>
+                                        </li>
+                                        <li>
+                                            <Link
+                                                href="#"
+                                                className="group flex gap-3 gap-x-3 rounded-md p-3 font-semibold leading-relaxed tracking-tighter text-foreground hover:bg-red-500"
+                                            >
+                                                <PiUser className="h-6 w-6 shrink-0 text-foreground" />
+                                                People
+                                            </Link>
+                                        </li>
+                                        <li>
+                                            <Link
+                                                href="#"
+                                                className="group flex gap-3 gap-x-3 rounded-md p-3 font-semibold leading-relaxed tracking-tighter text-foreground hover:bg-red-500"
+                                            >
+                                                <PiSquaresFour className="h-6 w-6 shrink-0 text-foreground" />
+                                                My Tasks
+                                            </Link>
+                                        </li>
+                                        <li>
+                                            <Link
+                                                href="#"
+                                                className="group flex gap-3 gap-x-3 rounded-md p-3 font-semibold leading-relaxed tracking-tighter text-foreground hover:bg-red-500"
+                                            >
+                                                <PiLockKeyOpen className="h-6 w-6 shrink-0 text-foreground" />
+                                                Log Out
+                                            </Link>
+                                        </li>
+                                    </ul>
+                                </li>
+                                {/* workspaces */}
+                                <li>
+                                    <div className='flex items-center justify-between'>
+                                        <div>
+                                            Workspaces
+                                        </div>
+                                        <Link>
+                                        
+                                        </Link>
+                                    </div>
+                                </li>
+                                <li className="-mx-6 mt-auto">{/* profile */}</li>
+                            </ul>
+                        </nav>
                     </div>
                 </div>
 
