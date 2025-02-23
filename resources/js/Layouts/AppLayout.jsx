@@ -56,7 +56,100 @@ export default function AppLayout({ children, title }) {
                                             </button>
                                         </div>
                                     </Transition.Child>
-                                    {/* Sidebar Responsive */}
+                                    {/* Sidebar Responsive start */}
+                                    <div className="flex flex-col gap-y-5 overflow-y-auto bg-white px-6 pb-2 dark:bg-gray-900">
+                                        <div className="flex h-16 shrink-0 items-center space-x-1.5">
+                                            <Link
+                                                href="/"
+                                                className="-m-1.5 p-1.5 text-2xl font-black leading-relaxed tracking-tighter"
+                                            >
+                                                Plannffy <span className="text-red-500">.</span>
+                                            </Link>
+                                        </div>
+                                        <nav className="flex flex-1 flex-col">
+                                            <ul role="list" className="flex flex-1 flex-col gap-y-7">
+                                                <li>
+                                                    <ul role="list" className="-mx-2 space-y-1">
+                                                        {/* menu */}
+                                                        <li>
+                                                            <Link
+                                                                href="#"
+                                                                className="group flex gap-x-3 rounded-md p-3 text-sm font-semibold leading-relaxed text-foreground hover:bg-red-400"
+                                                            >
+                                                                <PiHouse className="h-6 w-6 shrink-0 text-foreground" />
+                                                                Dashboard
+                                                            </Link>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li>
+                                                    <ul role="list" className="-mx-2 space-y-1">
+                                                        <li>
+                                                            <Link
+                                                                href=""
+                                                                className="group flex gap-x-3 rounded-md p-3 text-sm font-semibold leading-relaxed text-foreground hover:bg-red-400"
+                                                            >
+                                                                <PiUser className="h-6 w-6 shrink-0 text-foreground" />
+                                                                People
+                                                            </Link>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li>
+                                                    <ul role="list" className="-mx-2 space-y-1">
+                                                        <li>
+                                                            <Link
+                                                                href=""
+                                                                className="group flex gap-x-3 rounded-md p-3 text-sm font-semibold leading-relaxed text-foreground hover:bg-red-400"
+                                                            >
+                                                                <PiSquaresFour className="h-6 w-6 shrink-0 text-foreground" />
+                                                                My Task
+                                                            </Link>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li>
+                                                    <ul role="list" className="-mx-2 space-y-1">
+                                                        <li>
+                                                            <Link
+                                                                href=""
+                                                                className="group flex gap-x-3 rounded-md p-3 text-sm font-semibold leading-relaxed text-foreground hover:bg-red-400"
+                                                            >
+                                                                <PiLockKeyOpen className="h-6 w-6 shrink-0 text-foreground" />
+                                                                Log Out
+                                                            </Link>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                {/* workspace start */}
+                                                <li>
+                                                    <div className="flex items-center justify-between">
+                                                        <div className="text-xs font-semibold uppercase leading-relaxed text-foreground">
+                                                            Workspace
+                                                        </div>
+                                                        <Link>
+                                                            <PiPlus className="h-4 w-4 text-foreground hover:text-red-400" />
+                                                        </Link>
+                                                    </div>
+                                                    <ul role="list" className="-mx-2 mt-2 space-y-1">
+                                                        <li>
+                                                            <Link
+                                                                href="#"
+                                                                className="group flex w-full gap-x-3 rounded-md p-3 text-sm font-semibold text-foreground hover:bg-red-400"
+                                                            >
+                                                                <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-lg border border-foreground bg-white text-[0.625rem] font-medium text-foreground">
+                                                                    B
+                                                                </span>
+                                                                <span className="truncate">Back End Developer</span>
+                                                            </Link>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                {/* workspace end */}
+                                            </ul>
+                                        </nav>
+                                    </div>
+                                    {/* Sidebar Responsive end */}
                                 </Dialog.Panel>
                             </Transition.Child>
                         </div>
@@ -77,7 +170,7 @@ export default function AppLayout({ children, title }) {
                         <nav className="flex flex-1 flex-col">
                             <ul role="list" className="flex flex-1 flex-col gap-y-7">
                                 <li>
-                                    <ul role="list" className="-mx-2 space-y-3">
+                                    <ul role="list" className="-mx-2 space-y-1">
                                         {/* menu */}
                                         <li>
                                             <Link
@@ -133,8 +226,10 @@ export default function AppLayout({ children, title }) {
                                                 href="#"
                                                 className="group flex w-full gap-x-3 rounded-md p-3 font-semibold leading-relaxed text-foreground hover:bg-red-400"
                                             >
-                                                <span className='border-foreground text-foreground flex h-6 w-6  shrink-0 items-center justify-center rounded-lg border bg-white'>B</span>
-                                                <span className='truncate'>Back End Developer</span>
+                                                <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-lg border border-foreground bg-white text-foreground">
+                                                    B
+                                                </span>
+                                                <span className="truncate">Back End Developer</span>
                                             </Link>
                                         </li>
                                         <li>
@@ -142,8 +237,10 @@ export default function AppLayout({ children, title }) {
                                                 href="#"
                                                 className="group flex w-full gap-x-3 rounded-md p-3 font-semibold leading-relaxed text-foreground hover:bg-red-400"
                                             >
-                                                <span className='border-foreground text-foreground flex h-6 w-6  shrink-0 items-center justify-center rounded-lg border bg-white'>F</span>
-                                                <span className='truncate'>Front End Developer</span>
+                                                <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-lg border border-foreground bg-white text-foreground">
+                                                    F
+                                                </span>
+                                                <span className="truncate">Front End Developer</span>
                                             </Link>
                                         </li>
                                     </ul>
@@ -151,14 +248,16 @@ export default function AppLayout({ children, title }) {
                                 {/* Workspace end */}
                                 {/* profile start*/}
                                 <li className="-mx-6 mt-auto">
-                                    <Link href=''
-                                    className='flex items-center px-6 py-3 text-sm font-semibold leading-relaxed gap-x-4 text-foreground hover:bg-gray-200'>
-                                    <Avatar>
-                                        <AvatarFallback></AvatarFallback>
-                                    </Avatar>
-                                    <span>Rino Arif Budiyanto</span>
+                                    <Link
+                                        href=""
+                                        className="flex items-center gap-x-4 px-6 py-3 text-sm font-semibold leading-relaxed text-foreground hover:bg-gray-200"
+                                    >
+                                        <Avatar>
+                                            <AvatarFallback></AvatarFallback>
+                                        </Avatar>
+                                        <span>Rino Arif Budiyanto</span>
                                     </Link>
-                                    </li>
+                                </li>
                             </ul>
                         </nav>
                     </div>
